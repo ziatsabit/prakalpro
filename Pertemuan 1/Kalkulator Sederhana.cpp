@@ -1,52 +1,35 @@
-#include <conio.h>
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-int main(){
-	
-	int bil1,bil2, pil;
-	float hasil;
-	string operasi;
-	
-	cout<<"PILIH OPERATOR ARITMATIKA"<<endl;
-	cout<<"1. Penjumlahan"<<endl;
-	cout<<"2. Pengurangan"<<endl;
-	cout<<"3. Perkalian"<<endl;
-	cout<<"4. Pembagian"<<endl;
-	cout<<"5. Modulus"<<endl;
-	cout<<endl;
-	
-	cout<<"Masukan Pilihan : ";
-	cin>>pil;
-	cout<<"Masukan Bilangan pertama : ";
-	cin>>bil1;
-	cout<<"Masukan Bilangan kedua : ";
-	cin>>bil2;	
-	
-	switch(pil){
-	        case 1 : hasil=bil1+bil2;
-			operasi='+';
-			break;
-		case 2 : hasil=bil1-bil2;
-			operasi='-';
-			break;
-		case 3 : hasil=bil1*bil2;
-			operasi='*';
-			break;
-		case 4 : hasil=bil1/bil2;
-			operasi='/';
-			break;
-		case 5 : hasil=bil1%bil2;
-			 operasi='%';
-			break;
-		default :
-			cout<<"Salah Masukan Operator"<<endl;
+main(){
+	int a, b, c, m;
+	cout<<"PROGRAM KALKULATOR"<<endl;
+	while(true){
+		cout<<"\nMenu: \n1. Penambahan \n2. Pengurangan \n3. Perkalian \n4. Pembagian \n0. Keluar"<<endl;
+		cout<<"Pilih Menu No: ";cin>>m;
+		if(m==1){
+	    	cout<<"Bilangan Pertama: ";cin>>a;
+	    	cout<<"Bilangan Kedua: ";cin>>b;
+	    	cout<<"Hasil "<<a<<" + "<<b<<" = "<<a+b<<endl;
+		}
+		else if(m==2){
+			cout<<"Bilangan Pertama: ";cin>>a;
+	    	cout<<"Bilangan Kedua: ";cin>>b;
+	    	cout<<"Hasil "<<a<<" - "<<b<<" = "<<a-b<<endl;	
+		}
+		else if(m==3){
+		    cout<<"Bilangan Pertama: ";cin>>a;
+	    	cout<<"Bilangan Kedua: ";cin>>b;
+	    	cout<<"Hasil "<<a<<" * "<<b<<" = "<<a*b<<endl;
+		}
+		else if(m==4){
+		    cout<<"Bilangan Pertama: ";cin>>a;
+	    	cout<<"Bilangan Kedua: ";cin>>b;
+	    	cout<<"Hasil "<<a<<" / "<<b<<" = "<<a/b<<endl;
+		}
+		else if(m==0)
+		    break;
 	}
-	cout<<"-----------------------------"<<endl;
-	cout<<"    "<<bil1<<operasi<<bil2<<"="<<hasil<<endl;
-	cout<<"-----------------------------"<<endl;
-	
-	getch();
+	cout<<"Anda Telah Keluar Dari Kalkulator";
+	return 0;
 }
